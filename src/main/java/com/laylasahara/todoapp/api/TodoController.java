@@ -4,6 +4,7 @@ import com.laylasahara.todoapp.model.Category;
 import com.laylasahara.todoapp.model.Todo;
 import com.laylasahara.todoapp.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +15,17 @@ public class TodoController {
 
     TodoService todoService;
 
+    @Value("${server.port}")
+    private int port;
+
     @Autowired
     public TodoController(TodoService todoService) {
         this.todoService = todoService;
+    }
+
+    @RequestMapping(path = "/health_check", method = RequestMethod.GET)
+    public String healthCheck() {
+        return "I'm running on port: " + port;
     }
 
     @RequestMapping(path = "todos", method = RequestMethod.GET)

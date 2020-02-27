@@ -100,18 +100,18 @@ class TodoAppApplicationTests {
     private List<Todo> makeTodos() {
         Todo todo1 = new Todo();
         todo1.setTitle("The title 1");
-        todo1.setId(1);
+//        todo1.setId(1);
         todo1.setDescription("Tellus mauris a diam maecenas sed enim ut sem viverra.");
         todo1.setCategory(Category.PENDING);
 
         Todo todo2 = new Todo();
         todo2.setTitle("The title 2");
-        todo2.setId(2);
+//        todo2.setId(2);
         todo2.setDescription("elit at imperdiet dui accumsan sit amet nulla facilisi morbi");
         todo2.setCategory(Category.PENDING);
 
         Todo todo3 = new Todo();
-        todo3.setId(3);
+//        todo3.setId(3);
         todo3.setTitle("The title 3");
         todo3.setDescription("tempus iaculis urna id volutpat lacus laoreet non curabitur");
         todo3.setCategory(Category.INPROGRESS);
