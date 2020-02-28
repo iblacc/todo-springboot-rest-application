@@ -23,7 +23,7 @@ public class TodoController {
         this.todoService = todoService;
     }
 
-    @RequestMapping(path = "/health_check", method = RequestMethod.GET)
+    @RequestMapping(path = "/health-check", method = RequestMethod.GET)
     public String healthCheck() {
         return "I'm running on port: " + port;
     }
